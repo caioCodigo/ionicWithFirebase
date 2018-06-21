@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Editar
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content *ngIf="item">
+
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+  <ion-item >
+      <ion-label>Titulo:</ion-label>
+      <ion-input  [(ngModel)]="item.name" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item >
+      <ion-label>Descrição:</ion-label>
+      <ion-input [(ngModel)]="item.descricao" type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Horario:</ion-label>
+      <ion-input [(ngModel)]="item.horario" type="text"></ion-input>
+    </ion-item>
+  
+    <button ion-button block clear (click)="saveItem(item)">ADD</button>
+    <button ion-button block clear color="danger" (click)="deleteItem(item)">Delete</button>
+
+</ion-content>
+
+<ion-content *ngIf="!item">
+  <h2 text-center>Error</h2>
+  <h2 text-center>Clique em um item antes.</h2>
+  <h2 text-center>:(</h2>
+
+
+ 
+  
+</ion-content>
+

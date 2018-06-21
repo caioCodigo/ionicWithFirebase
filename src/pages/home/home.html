@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>Tarefas</ion-title>
+  
+      <ion-buttons end>
+        <button (click)="navegar()" ion-button>
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+   <ion-list>
+     <ion-item  (click)="editar(item)" class="item" *ngFor="let item of shoppingList$ | async">
+      <h1>{{item.name | uppercase}}</h1>
+      <p>{{item.descricao}}</p>
+      <p>{{item.horario}}</p>
+     </ion-item>
+   </ion-list>
+  </ion-content>
+  

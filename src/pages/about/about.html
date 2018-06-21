@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Adcionar
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item class="textbox">
+    <ion-label class="infotxt">Titulo:</ion-label>
+    <ion-input [(ngModel)]="item.name" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item class="textbox">
+    <ion-label class="infotxt">Descrição:</ion-label>
+    <ion-input [(ngModel)]="item.descricao" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item class="textbox">
+    <ion-label class="infotxt">Horario:</ion-label>
+    <ion-input [(ngModel)]="item.horario" type="text"></ion-input>
+  </ion-item>
+
+  <button ion-button block clear (click)="addItem(item)">ADD</button>
+</ion-content>
